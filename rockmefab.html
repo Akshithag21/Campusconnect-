@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club Events</title>
+    <style>
+        body {
+            background-color: #f5f5dc; /* Cream white */
+            font-family: Arial, sans-serif;
+            color: black;
+            margin: 0;
+            padding: 0;
+        }
+
+        marquee {
+            background-color: #e9a7cb; /* Lavender rose */
+            color: black;
+            font-size: 24px;
+            font-weight: bold;
+            padding: 10px 0;
+        }
+
+        .container {
+            width: 40%; /* Decreased width of the boxes */
+            margin: 20px auto;
+            display: flex;
+            flex-direction: column;
+            gap: 30px; /* Increased gap */
+        }
+
+        .box {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 30px; /* Increased padding */
+            background-color: white;
+            position: relative;
+            height: 150px; /* Increased height */
+        }
+
+        .box h2 {
+            margin: 0;
+            text-align: center; /* Center-align the heading */
+            font-size: 32px; /* Increased font size */
+            font-weight: bold;
+        }
+
+        .status {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: green; /* Status text in green */
+            font-size: 16px; /* Increased font size slightly */
+            font-weight: bold;
+        }
+
+        .view-button {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background-color: #e9a7cb; /* Lavender rose */
+            border: none;
+            border-radius: 5px;
+            width: 150px; /* Increased width */
+            padding: 15px; /* Adjusted padding */
+            color: black;
+            font-weight: bold;
+            font-size: 16px; /* Increased font size for text */
+            cursor: pointer;
+            text-align: center;
+            transition: 0.3s ease;
+        }
+
+        .view-button:hover {
+            opacity: 0.8;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <marquee behavior="scroll" direction="right">rock_me_fab</marquee>
+    <div class="container">
+        <!-- First Box -->
+        <div class="box">
+            <h2>Holi Event</h2>
+            <span class="status">Status: Past</span>
+            <button class="view-button" onclick="location.href='page1.html'">View</button>
+        </div>
+        <!-- Second Box -->
+        <div class="box">
+            <h2>Committee Kurrollu</h2>
+            <span class="status">Status: Past</span>
+            <button class="view-button" onclick="location.href='page2.html'">View</button>
+        </div>
+    </div>
+</body>
+</html>

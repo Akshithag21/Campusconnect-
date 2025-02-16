@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5dc;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Scrolling heading */
+        .scrolling-heading {
+            position: relative;
+            overflow: hidden;
+            white-space: nowrap;
+            background-color: #fbaed2;
+            padding:12px 0;
+            margin: 0;
+        }
+
+        .scrolling-heading span {
+            display: inline-block;
+            animation: scroll 10s linear infinite;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(100%);
+            }
+        }
+
+        /* Box styling */
+        .box {
+            border-radius: 8px;
+            margin: 20px auto;
+            padding: 20px;
+            position: relative;
+            background-color: white;
+            width: 600px;
+            height: 150px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .box h2 {
+            margin-top: 0;
+            text-align: center;
+            font-size: 32px;
+        }
+
+        .status {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            color: green;
+            font-size: 16px;
+        }
+
+        .view-button {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background-color: #fbaed2;
+            color: black;
+            border: none;
+            padding: 12px 60px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .view-button:hover {
+            background-color: #fbaed2;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Scrolling Club Name -->
+    <div class="scrolling-heading">
+        <span>Indian Society For Technical Education</span>
+    </div>
+
+    <!-- Box 2 -->
+    <div class="box">
+        <h2>Engineers Day</h2>
+        <div class="status">Status: Past</div>
+        <button class="view-button" onclick="window.location.href='engineersday.html';">View</button>
+    </div>
+
+    <!-- Box 3 -->
+    <div class="box">
+        <h2>National Science</h2>
+        <div class="status">Status: Past</div>
+        <button class="view-button" onclick="window.location.href='national.html';">View</button>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Club Management</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: url('finalback.jpg') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .top-title-container {
+      display: flex;
+      justify-content: space-between;
+      width: 90%;
+      max-width: 1200px;
+      padding: 20px;
+      align-items: center;
+    }
+
+    h1 {
+      margin: 0;
+      color: white;
+      font-size: 3rem; /* Increased font size */
+      text-align: left; /* Align text to the left */
+    }
+
+    .logout-button {
+      background-color: #ff00a673;
+      color: white;
+      border: none;
+      padding: 5px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .logout-button:hover {
+      background-color: #ad00b384;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 boxes per row */
+      gap: 30px; /* Space between boxes */
+      width: 90%;
+      max-width: 1200px;
+    }
+
+    .club-box {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+      width: 100%;
+    }
+
+    .club-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .club-header {
+      height: 150px;
+      overflow: hidden;
+    }
+
+    .club-header img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .club-details {
+      padding: 20px;
+      color: #555;
+      text-align: center;
+    }
+
+    .club-details p {
+      margin-bottom: 15px;
+      font-size: 1.1rem;
+    }
+
+    .club-footer {
+      display: flex;
+      justify-content: space-evenly;
+      padding: 15px 0;
+      background: #f9f9f9;
+    }
+
+    .club-footer button {
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      font-size: 1rem;
+    }
+
+    .club-footer button:hover {
+      background-color: #45a049;
+    }
+
+    .club-footer .view-btn {
+      background-color: #2196f3;
+    }
+
+    .club-footer .view-btn:hover {
+      background-color: #1e88e5;
+    }
+  </style>
+</head>
+<body>
+  <div class="top-title-container">
+    <h1>Admin Dashboard</h1>
+    <button class="logout-button" onclick="logout()">Logout</button>
+  </div>
+
+  <div class="grid-container">
+    <!-- Club Boxes -->
+    <div class="club-box">
+      <div class="club-header">
+        <img src="mathelets.jpg" alt="Mathelets">
+      </div>
+      <div class="club-details">
+        <p><b>Mathelets</b></p>
+      </div>
+      <div class="club-footer">
+        <button onclick="createClub('Mathelets')">Create</button>
+        <button class="view-btn" onclick="viewClub('Mathelets')">View</button>
+      </div>
+    </div>
+
+    <div class="club-box">
+      <div class="club-header">
+        <img src="splashout.jpg" alt="Splash Out">
+      </div>
+      <div class="club-details">
+        <p><b>Splash Out</b></p>
+      </div>
+      <div class="club-footer">
+        <button onclick="createClub('Splash Out')">Create</button>
+        <button class="view-btn" onclick="viewClub('Splash Out')">View</button>
+      </div>
+    </div>
+
+    <div class="club-box">
+      <div class="club-header">
+        <img src="rt.jpg" alt="Rythmic Thunders">
+      </div>
+      <div class="club-details">
+        <p><b>Rythmic Thunders</b></p>
+      </div>
+      <div class="club-footer">
+        <button onclick="createClub('Rythmic Thunders')">Create</button>
+        <button class="view-btn" onclick="viewClub('Rythmic Thunders')">View</button>
+      </div>
+    </div>
+
+    <div class="club-box">
+      <div class="club-header">
+        <img src="sports.jpg" alt="Sports">
+      </div>
+      <div class="club-details">
+        <p><b>Sports</b></p>
+      </div>
+      <div class="club-footer">
+        <button onclick="createClub('Sports')">Create</button>
+        <button class="view-btn" onclick="viewClub('Sports')">View</button>
+      </div>
+    </div>
+
+    <div class="club-box">
+      <div class="club-header">
+        <img src="rmf.jpg" alt="Rock Me Fab Club">
+      </div>
+      <div class="club-details">
+        <p><b>Rock Me Fab Club</b></p>
+      </div>
+      <div class="club-footer">
+        <button onclick="createClub('Rock Me Fab Club')">Create</button>
+        <button class="view-btn" onclick="viewClub('Rock Me Fab Club')">View</button>
+      </div>
+    </div>
+
+    <div class="club-box">
+      <div class="club-header">
+        <img src="iste.jpg" alt="ISTE">
+      </div>
+      <div class="club-details">
+        <p><b>ISTE</b></p>
+      </div>
+      <div class="club-footer">
+        <button onclick="createClub('ISTE')">Create</button>
+        <button class="view-btn" onclick="viewClub('ISTE')">View</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function createClub(clubName) {
+      window.location.href = "create_event.php?clubName=" + encodeURIComponent(clubName);
+    }
+
+    function viewClub(clubName) {
+      if (clubName === 'Mathelets') {
+        window.location.href = 'mathelets.php'; // Redirect to Mathelets view page
+      } else if (clubName === 'Splash Out') {
+        window.location.href = 'splashout.php'; // Redirect to Splash Out view page
+      } else if (clubName === 'Rythmic Thunders') {
+        window.location.href = 'rhythmic.php'; // Redirect to Rythmic Thunders view page
+      } else if (clubName === 'Sports') {
+        window.location.href = 'sports.php'; // Redirect to Sports view page
+      } else if (clubName === 'Rock Me Fab Club') {
+        window.location.href = 'rockmefab.php'; // Redirect to Rock Me Fab Club view page
+      } else if (clubName === 'ISTE') {
+        window.location.href = 'iste.php'; // Redirect to ISTE view page
+      }
+    }
+
+    function logout() {
+      // Show logout success message
+      alert('Logout successful');
+      // Redirect to login page
+      window.location.href = 'login.html';
+    }
+  </script>
+</body>
+</html>

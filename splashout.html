@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Splash_Out</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5dc; /* Cream white background */
+            color: black;
+        }
+
+        .marquee {
+            background-color: #fbaed2; /* Lavender rose background for marquee */
+            color: black; /* Text color in marquee */
+            padding: 10px 0;
+            overflow: hidden;
+            white-space: nowrap;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            font-size: 28px; /* Set font size for marquee */
+            font-weight: bold; /* Make text bold */
+        }
+
+        .marquee span {
+            display: inline-block;
+            animation: scroll-right 10s linear infinite;
+        }
+
+        @keyframes scroll-right {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 600px;
+            margin: 60px auto 20px; /* Adjusted for marquee */
+        }
+
+        .box {
+            background-color: white;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .box h2 {
+            margin: 0;
+            font-size: 32px; /* Increased font size for the headings */
+            text-align: center;
+        }
+        
+        .box .status {
+            color: green;
+            font-weight: bold;
+            position: absolute;
+            bottom: 10px;
+            left: 15px;
+        }
+
+        .box .view {
+            position: absolute;
+            bottom: 10px;
+            right: 15px;
+        }
+
+        .box .view button {
+            background-color: #fbaed2;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            padding: 12px 40px;
+            cursor: pointer;
+            font-size: 18px; /* Increased font size for the button text */
+            width: auto;
+            min-width: 200px;
+        }
+
+        .box .view button:hover {
+            opacity: 0.8;
+        }
+
+        .relative {
+            position: relative;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="marquee">
+    <span>Splash_Out</span>
+</div>
+
+<div class="container">
+    <div class="box relative">
+        <h2>Shri Krishna Janmastami</h2>
+        <div class="status">Status: Past</div>
+        <div class="view">
+            <button class="view-button" onclick="location.href='ks_description.html'">View</button>
+        </div>
+    </div>
+
+    <div class="box relative">
+        <h2>Film & Fun Fiesta</h2>
+        <div class="status">Status: Past</div>
+        <div class="view">
+            <button onclick="location.href='ff_description.html'">View</button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

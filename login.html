@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Connect Login</title>
+  <style>
+    /* General Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      position: relative;
+      height: 100vh;
+      background: url('logo-background.png') center center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Carousel Styles */
+    .carousel-container {
+      position: absolute;
+      top: 10px;
+      width: 100%;
+      max-width: 1000px;
+      overflow: hidden;
+      margin: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .carousel-slide {
+      display: flex;
+      animation: slide 10s infinite;
+    }
+    .carousel-slide img {
+      width: 100%;
+      flex-shrink: 0;
+      height: 200px;
+      object-fit: cover;
+    }
+    @keyframes slide {
+      0% { transform: translateX(0); }
+      33% { transform: translateX(-100%); }
+      66% { transform: translateX(-200%); }
+      100% { transform: translateX(0); }
+    }
+
+    /* Login Container */
+    .login-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: 220px;
+      width: 80%;
+      max-width: 900px;
+      gap: 20px;
+    }
+
+    /* Login Box Styles */
+    .login-box {
+      width: 45%;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .login-box h2 {
+      margin-bottom: 15px;
+      color: #fff;
+    }
+    .login-box form input {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 5px;
+      background: rgba(255, 255, 255, 0.2);
+      color: #fff;
+    }
+    .login-box form input::placeholder {
+      color: #ddd;
+    }
+    .login-box form button {
+      background-color: rgba(255, 255, 255, 0.3);
+      color: #fff;
+      border: none;
+      padding: 10px;
+      width: 100%;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .login-box form button:hover {
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+  </style>
+</head>
+<body>
+  <!-- Carousel -->
+  <div class="carousel-container">
+    <div class="carousel-slide">
+      <img src="event1.jpg" alt="Event 1">
+      <img src="event2.jpg" alt="Event 2">
+      <img src="event3.jpg" alt="Event 3">
+    </div>
+  </div>
+
+  <!-- Login Section -->
+  <div class="login-container">
+    <!-- Admin Login -->
+    <div class="login-box">
+      <h2>Admin Login</h2>
+      <form action="login.php" method="POST">
+        <input type="text" name="email" placeholder="Email" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <button type="submit" name="login" value="admin">Login</button>
+      </form>
+    </div>
+
+    <!-- Student Login -->
+    <div class="login-box">
+      <h2>Student Login</h2>
+      <form action="login.php" method="POST">
+        <input type="text" name="email" placeholder="Email" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <button type="submit" name="login" value="student">Login</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

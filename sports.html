@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Club</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5dc; /* Cream white */
+            color: black;
+            font-family: Arial, sans-serif;
+        }
+
+        marquee {
+            color: black;
+            font-size: 36px; /* Increased font size */
+            font-weight: bold;
+            background-color: #fbaed2; /* Lavender pink */
+            padding: 10px 0;
+            direction: left;
+        }
+
+        .box {
+            width: 95%; /* Increased width */
+            max-width: 500px; /* Increased max width */
+            height: 150px; /* Increased height */
+            margin: 50px auto;
+            border-radius: 8px;
+            padding: 20px;
+            position: relative;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .box h2 {
+            margin: 0;
+            text-align: center;
+            font-size: 40px;
+        }
+
+        .status {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            font-weight: bold;
+        }
+
+        .status span {
+            color: green;
+        }
+
+        .view-box {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+        }
+
+        .view-button {
+            background-color: #fbaed2; /* Lavender rose */
+            color: black;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 14px;
+            border-radius: 5px;
+            width: 150px; 
+        }
+
+        .view-button:hover {
+            background-color: #f98abc; /* Slightly darker lavender rose */
+        }
+    </style>
+</head>
+<body>
+    <marquee class="scrolling-text" direction="right">Sports</marquee>
+
+    <div class="box">
+        <h2>Sportify</h2>
+        <div class="status">Status: <span>Past</span></div>
+        <div class="view-box">
+            <button class="view-button" onclick="navigateToView()">View</button>
+        </div>
+    </div>
+
+    <script>
+        function navigateToView() {
+            window.location.href = "sports-description.html"; // Correct URL for the description page
+        }
+    </script>
+</body>
+</html>
